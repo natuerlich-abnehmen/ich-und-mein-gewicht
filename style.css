@@ -308,3 +308,23 @@ footer {
   padding-inline-start: 0 !important;
   margin-inline-start: 0 !important;
 }
+
+.image-with-caption {
+  display: inline-block;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.image-with-caption img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.image-with-caption figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--dark);
+  opacity: 0.8;
+}
