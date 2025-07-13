@@ -1,329 +1,310 @@
-        :root {
-            --primary: #2c3e50;
-            --secondary: #e74c3c;
-            --accent: #3498db;
-            --light: #ecf0f1;
-            --dark: #1a1a1a;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.7;
-            color: var(--dark);
-            background-color: #fff;
-            overflow-x: hidden;
-        }
-        
-        /* Elegant Header with Nature-Inspired Background */
-        header {
-            background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.9)), 
-                        url('https://images.unsplash.com/photo-1497250681960-ef046c08a56e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 6rem 1rem 8rem;
-            position: relative;
-            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-        }
-        
-        /* Остальные стили остаются без изменений */
-        .header-content {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .blog-title {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        .blog-slogan {
-            font-size: 1.4rem;
-            font-weight: 300;
-            max-width: 700px;
-            margin: 0 auto 2rem;
-            opacity: 0.9;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background-color: var(--secondary);
-            color: white;
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            margin-top: 1.5rem;
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-            background-color: #c0392b;
-        }
-        
-        /* Main Content Section */
-        .main-container {
-            max-width: 1100px;
-            margin: -4rem auto 0;
-            padding: 0 1.5rem;
-            position: relative;
-        }
-        
-        .content-card {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            padding: 3rem;
-            margin-bottom: 3rem;
-        }
-        
-        h2 {
-            color: var(--primary);
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            position: relative;
-            display: inline-block;
-        }
-        
-
-		
-		h3 {
-    color: var(--primary);       /* Основной темно-синий цвет */
-    font-size: 1.4rem;          /* Меньше, чем h2 (1.8rem) */
-    font-weight: 600;           /* Полужирное начертание */
-    margin: 1.5rem 0 1rem 0;    /* Отступы сверху/снизу */
-    position: relative;
-    padding-bottom: 0.5rem;     /* Для декоративной линии */
+:root {
+  --primary: #2c3e50;
+  --secondary: #e74c3c;
+  --accent: #3498db;
+  --light: #ecf0f1;
+  --dark: #1a1a1a;
 }
 
-h3::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 40px;                /* Короче, чем у h2 (50px) */
-    height: 2px;                /* Тоньше, чем у h2 (3px) */
-    background-color: var(--accent); /* Голубая линия вместо оранжевой */
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-        
-        .intro-text {
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-            color: #555;
-        }
-        
-        /* Articles List - Premium Style */
-        .articles-section {
-            margin-top: 2rem;
-        }
-        
-        .article-list {
-            list-style: none;
-            margin-top: 2rem;
-        }
-        
-        .article-item {
-            padding: 1rem;
-            margin-bottom: 1rem;
-            border-left: 4px solid var(--accent);
-            background-color: var(--light);
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-        }
-        
-        .article-item:hover {
-            transform: translateX(10px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .article-number {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--accent);
-            margin-right: 1.5rem;
-            min-width: 40px;
-        }
-        
-        .article-content {
-            flex: 1;
-        }
-        
-        .article-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--dark);
-            margin-bottom: 0.3rem;
-            display: block;
-        }
-        
-        .article-link {
-            color: inherit;
-            text-decoration: none;
-        }
-        
-        .article-meta {
-            display: flex;
-            align-items: center;
-            font-size: 0.85rem;
-            color: #7f8c8d;
-        }
-        
-        .article-date {
-            margin-right: 1rem;
-        }
-        
-        .article-reading-time {
-            display: flex;
-            align-items: center;
-        }
-        
-        .article-reading-time::before {
-            content: '•';
-            margin: 0 0.5rem;
-        }
-        
-        /* Premium Footer */
-        footer {
-            background-color: var(--primary);
-            color: white;
-            padding: 0 1rem 2rem;
-            /*margin-top: 4rem;*/
-        }
-        
-        .footer-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-        
-        .footer-column h3 {
-            color: white;
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .footer-links {
-            list-style: none;
-        }
-        
-        .footer-links li {
-            margin-bottom: 0.8rem;
-        }
-        
-        .footer-links a {
-            color: #bdc3c7;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .footer-links a:hover {
-            color: white;
-            padding-left: 5px;
-        }
-        
-        .newsletter-form {
-            display: flex;
-            margin-top: 1rem;
-        }
-        
-        .newsletter-input {
-            flex: 1;
-            padding: 0.8rem;
-            border: none;
-            border-radius: 4px 0 0 4px;
-            font-family: inherit;
-        }
-        
-        .newsletter-button {
-            background-color: var(--secondary);
-            color: white;
-            border: none;
-            padding: 0 1.2rem;
-            border-radius: 0 4px 4px 0;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-        
-        .newsletter-button:hover {
-            background-color: #c0392b;
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-        
-        .social-link {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255,255,255,0.1);
-            border-radius: 50%;
-            color: white;
-            transition: all 0.3s ease;
-        }
-        
-        .social-link:hover {
-            background-color: var(--secondary);
-            transform: translateY(-3px);
-        }
-        
-        .copyright {
-            text-align: center;
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: #bdc3c7;
-            font-size: 0.9rem;
-        }
-        
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
-            header {
-                padding: 4rem 1rem 6rem;
-                clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
-            }
-            
-            .blog-title {
-                font-size: 2.2rem;
-            }
-            
-            .blog-slogan {
-                font-size: 1.1rem;
-            }
-            
-            .content-card {
-                padding: 2rem 1.5rem;
-            }
-            
-            footer {
-                clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
-            }
-        }
+
+body {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.7;
+  color: var(--dark);
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.9)),
+              url('https://images.unsplash.com/photo-1497250681960-ef046c08a56e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 6rem 1rem 8rem;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+
+.header-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.blog-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.blog-slogan {
+  font-size: 1.4rem;
+  font-weight: 300;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  opacity: 0.9;
+}
+
+/* Main Content */
+.main-container {
+  max-width: 1100px;
+  margin: -4rem auto 0;
+  padding: 0 1.5rem;
+  position: relative;
+}
+
+.content-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  padding: 3rem;
+  margin-bottom: 3rem;
+}
+
+.content-card h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #286762;
+  margin-bottom: 2rem;
+  letter-spacing: 0.01em;
+  line-height: 1.17;
+  text-shadow: 0 2px 6px rgba(44,62,80,0.09);
+}
+
+.content-card h2 {
+  color: var(--primary);
+  font-size: 1.45rem;
+  font-weight: 600;
+  margin-top: 2.6rem;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.01em;
+  line-height: 1.21;
+  border-left: 4px solid #298c7e;
+  padding-left: 12px;
+  background: linear-gradient(90deg, #ecf0f1 80%, transparent 100%);
+}
+
+.content-card h3 {
+  color: var(--primary);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  padding-left: 6px;
+  border-left: 4px solid #48a8bf;
+  background: linear-gradient(90deg, #f8fafb 80%, transparent 100%);
+}
+
+.content-card p,
+.content-card ul,
+.content-card ol {
+  margin-bottom: 1.25rem;
+  font-size: 1.09rem;
+}
+
+.content-card p + h2,
+.content-card ul + h2,
+.content-card p + ul,
+.content-card ul + p,
+.content-card h2 + p,
+.content-card h2 + ul,
+.content-card ul + ul {
+  margin-top: 1.15rem;
+}
+
+.content-card ul,
+.content-card ol {
+  padding-left: 1.35rem;
+  margin-top: -0.4rem;
+  margin-bottom: 1.4rem;
+}
+
+.content-card ul {
+  list-style-type: disc;
+}
+
+.content-card ol {
+  list-style-type: decimal;
+}
+
+.content-card ul li,
+.content-card ol li {
+  margin-bottom: 0.45rem;
+  font-size: 1.09rem;
+  line-height: 1.7;
+  color: #444;
+  padding-left: 0.1rem;
+}
+
+.content-card ul li:last-child,
+.content-card ol li:last-child {
+  margin-bottom: 0;
+}
+
+.content-card a[href^="mailto:"] {
+  color: #399576;
+  font-weight: 600;
+  text-decoration: underline dotted;
+  transition: color 0.2s;
+}
+
+.content-card a[href^="mailto:"]:hover {
+  color: #676767;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+/* ——————————————————————————————
+   Вертикальный список «Meine Artikel» 
+   (одна ссылка = одна строка)
+   —————————————————————————————— */
+.article-list {
+  list-style: none;
+  margin: 2rem 0;
+  padding: 0;
+}
+
+.article-list li {
+  border-bottom: 1px solid var(--light);
+}
+
+.article-list li + li {
+  margin-top: 0.5rem;
+}
+
+.article-list a {
+  display: block;
+  position: relative;
+  padding: 0.75rem 0;
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Растущая линия-подчёркивание */
+.article-list a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 0;
+  background: #48a8bf;
+  transition: width 0.7s ease;
+}
+
+.article-list a:hover {
+  color: #48a8bf;
+}
+
+.article-list a:hover::before {
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    padding: 4rem 1rem 6rem;
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+  }
+
+  .blog-title {
+    font-size: 2.2rem;
+  }
+
+  .blog-slogan {
+    font-size: 1.1rem;
+  }
+
+  .main-container {
+    padding: 0 0.5rem;
+  }
+
+  .content-card {
+    padding: 2rem 1rem;
+  }
+
+  .content-card h1 {
+    font-size: 1.6rem;
+    margin-bottom: 1.3rem;
+  }
+
+  .content-card h2 {
+    font-size: 1.2rem;
+    margin-top: 1.7rem;
+    margin-bottom: 0.7rem;
+    padding-left: 8px;
+  }
+
+  .content-card p,
+  .content-card ul,
+  .content-card ol {
+    font-size: 0.98rem;
+  }
+
+  .content-card ul,
+  .content-card ol {
+    padding-left: 1.1rem;
+    margin-bottom: 1.1rem;
+  }
+}
+
+footer {
+  background-color: var(--primary);
+  color: white;
+  padding: 0 1rem 2rem;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  color: #bdc3c7;
+  font-size: 0.9rem;
+}
+
+
+
+.article-list {
+  list-style-type: none !important;     /* no bullets */
+  margin: 0 !important;                 /* no default margins */
+  padding: 0 !important;                /* no default padding */
+}
+
+
+.article-list li {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+
+.article-list li::marker {
+  content: none !important;
+  display: none !important;
+}
+
+
+.article-list,
+.article-list ul,
+.article-list ol {
+  padding-inline-start: 0 !important;
+  margin-inline-start: 0 !important;
+}
