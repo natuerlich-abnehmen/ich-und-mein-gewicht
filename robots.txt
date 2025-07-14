@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://natuerlich-abnehmen.github.io/ich-und-mein-gewicht/sitemap.xml
